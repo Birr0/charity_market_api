@@ -2,13 +2,14 @@ from fastapi import FastAPI, Request
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 import ebay, oxfam, categories
+import os
 
 load_dotenv()
 
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 
-#ORIGIN = "https://{}".format(os.environ.get('DOMAIN'))
+#ORIGIN = "{}".format(os.environ.get('DOMAIN'))
 ORIGIN = "http://localhost:3000"
 origins = [
     ORIGIN,
@@ -31,3 +32,4 @@ async def add_access_origin_header(request: Request, call_next):
 app.include_router(ebay.router)
 app.include_router(oxfam.router)
 app.include_router(categories.router)
+

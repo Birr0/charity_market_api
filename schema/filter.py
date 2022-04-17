@@ -16,5 +16,3 @@ class Filter(BaseModel):
     specified_sellers: Optional[List[CharityList]]
     seller_type: Optional[str] # might be useful for filtering out charities ...
     conditions: Optional[List[conditions.EbayCondition]]
-
-print(CharityList)

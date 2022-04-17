@@ -12,7 +12,7 @@ def get_ebay_product(item_id: str):
     tk = token(['https://api.ebay.com/oauth/api_scope'])
     product = EbayBrowse(tk).item(item_id)
     charity = EbayBrowse(tk).charity_details(item_id)
-    print(product)
+
     image_list = []
     if 'image' in product:
         image_list.append(product['image']['imageUrl'])

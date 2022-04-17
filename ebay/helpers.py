@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 
 class EbayOauth():
     def __init__(self, client_credentials):
-        print(client_credentials)
         self.client_credentials = base64.b64encode(client_credentials.encode('utf-8')).decode('utf-8')
         self.url = 'https://api.ebay.com/identity/v1/oauth2/token'
     def client_credentials_token(self, scope):

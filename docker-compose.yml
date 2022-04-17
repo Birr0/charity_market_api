@@ -1,0 +1,7 @@
+version '3.8'
+
+services:
+    api:
+        image: 1968hr/api_charity_market
+        expose:
+        - 8000
